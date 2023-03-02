@@ -26,7 +26,8 @@ apt-get install -y curl ca-certificates
 apt-get install -y software-properties-common gpg-agent
 add-apt-repository ppa:longsleep/golang-backports
 apt-get update
-apt-get install -y golang-go liblzo2-dev brotli libsodium-dev git make cmake gcc libc-dev
+apt-get install -y golang-1.19 liblzo2-dev brotli libsodium-dev git make cmake gcc libc-dev
+export PATH=$PATH:/usr/lib/go-1.19/bin
 go version
 
 git clone -b "$WALG_VERSION" --recurse-submodules https://github.com/wal-g/wal-g.git
